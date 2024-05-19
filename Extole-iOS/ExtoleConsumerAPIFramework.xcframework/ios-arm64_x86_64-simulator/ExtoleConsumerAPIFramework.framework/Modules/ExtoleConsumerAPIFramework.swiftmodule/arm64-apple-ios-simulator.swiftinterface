@@ -1,0 +1,987 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ExtoleConsumerAPIFramework
+import Alamofire
+@_exported import ExtoleConsumerAPIFramework
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public struct RestExceptionResponse : Swift.Codable {
+  public var uniqueId: Swift.String?
+  public var httpStatusCode: Swift.Int?
+  public var code: Swift.String?
+  public var message: Swift.String?
+  public var parameters: [Swift.String : ExtoleConsumerAPIFramework.Entry?]?
+  public init(uniqueId: Swift.String? = nil, httpStatusCode: Swift.Int? = nil, code: Swift.String? = nil, message: Swift.String? = nil, parameters: [Swift.String : ExtoleConsumerAPIFramework.Entry?]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case uniqueId
+    case httpStatusCode
+    case code
+    case message
+    case parameters
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol JSONType : Swift.Decodable, Swift.Encodable {
+  var jsonValue: Any { get }
+}
+public class Entry : ExtoleConsumerAPIFramework.JSONType {
+  final public let jsonValue: Any
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+  @objc deinit
+}
+public struct ZoneResponse : Swift.Codable {
+  public var eventId: Swift.String?
+  public var data: [Swift.String : ExtoleConsumerAPIFramework.Entry?]?
+  public var campaignId: Swift.String?
+  public init(eventId: Swift.String? = nil, data: [Swift.String : ExtoleConsumerAPIFramework.Entry?]? = nil, campaignId: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case eventId
+    case data
+    case campaignId
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SubmitEventResponse : Swift.Codable {
+  public var _id: Swift.String?
+  public var token: Swift.String?
+  public var cookieConsent: Swift.String?
+  public init(_id: Swift.String? = nil, token: Swift.String? = nil, cookieConsent: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case _id
+    case token
+    case cookieConsent
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct QualityResults : Swift.Codable {
+  public enum Score : Swift.String, Swift.Codable {
+    case error
+    case low
+    case high
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var score: ExtoleConsumerAPIFramework.QualityResults.Score?
+  public var qualityRuleResults: [ExtoleConsumerAPIFramework.QualityRuleResult]?
+  public init(score: ExtoleConsumerAPIFramework.QualityResults.Score? = nil, qualityRuleResults: [ExtoleConsumerAPIFramework.QualityRuleResult]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case score
+    case qualityRuleResults
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct APIHelper {
+  public static func rejectNil(_ source: [Swift.String : Any?]) -> [Swift.String : Any]?
+  public static func rejectNilHeaders(_ source: [Swift.String : Any?]) -> [Swift.String : Swift.String]
+  public static func convertBoolToString(_ source: [Swift.String : Any]?) -> [Swift.String : Any]?
+  public static func mapValuesToQueryItems(_ source: [Swift.String : Any?]) -> [Foundation.URLQueryItem]?
+}
+public struct CreateCreativeLogResponse : Swift.Codable {
+  public var pollingId: Swift.String?
+  public init(pollingId: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case pollingId
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers open class Configuration {
+  public static var dateFormat: Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class MeEndpoints {
+  open class func getMyProfile(completion: @escaping ((_ data: ExtoleConsumerAPIFramework.MyProfileResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func getMyProfileWithRequestBuilder() -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.MyProfileResponse>
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class JSONEncodingHelper {
+  open class func encodingParameters<T>(forEncodableObject encodableObj: T?) -> Alamofire.Parameters? where T : Swift.Encodable
+  open class func encodingParameters(forEncodableObject encodableObj: Any?) -> Alamofire.Parameters?
+  @objc deinit
+}
+public struct JSONDataEncoding : Alamofire.ParameterEncoding {
+  public func encode(_ urlRequest: any Alamofire.URLRequestConvertible, with parameters: Alamofire.Parameters?) throws -> Foundation.URLRequest
+  public static func encodingParameters(jsonData: Foundation.Data?) -> Alamofire.Parameters?
+}
+@_hasMissingDesignatedInitializers open class AuthorizationV4Endpoints {
+  open class func deleteToken(completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func deleteTokenWithRequestBuilder() -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func deleteToken(token: Swift.String, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func deleteTokenWithRequestBuilder(token: Swift.String) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func getToken(completion: @escaping ((_ data: ExtoleConsumerAPIFramework.TokenV4Response?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func getTokenWithRequestBuilder() -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.TokenV4Response>
+  open class func getTokenDetails(token: Swift.String, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.TokenV4Response?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func getTokenDetailsWithRequestBuilder(token: Swift.String) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.TokenV4Response>
+  open class func getTokenPost(completion: @escaping ((_ data: ExtoleConsumerAPIFramework.TokenV4Response?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func getTokenPostWithRequestBuilder() -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.TokenV4Response>
+  @objc deinit
+}
+public struct CreateTokenRequest : Swift.Codable {
+  public var durationSeconds: Swift.Int64?
+  public var jwt: Swift.String?
+  public var email: Swift.String?
+  public init(durationSeconds: Swift.Int64? = nil, jwt: Swift.String? = nil, email: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case durationSeconds
+    case jwt
+    case email
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers open class CreativeLoggingEndpoints {
+  open class func create(body: ExtoleConsumerAPIFramework.CreateCreativeLogRequest, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.CreateCreativeLogResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func createWithRequestBuilder(body: ExtoleConsumerAPIFramework.CreateCreativeLogRequest) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.CreateCreativeLogResponse>
+  @objc deinit
+}
+public struct QualityRuleResult : Swift.Codable {
+  public enum Score : Swift.String, Swift.Codable {
+    case error
+    case low
+    case high
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var ruleName: Swift.String?
+  public var score: ExtoleConsumerAPIFramework.QualityRuleResult.Score?
+  public init(ruleName: Swift.String? = nil, score: ExtoleConsumerAPIFramework.QualityRuleResult.Score? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case ruleName
+    case score
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum ErrorResponse : Swift.Error {
+  case error(Swift.Int, Foundation.Data?, any Swift.Error)
+}
+open class Response<T> {
+  final public let statusCode: Swift.Int
+  final public let header: [Swift.String : Swift.String]
+  final public let body: T?
+  public init(statusCode: Swift.Int, header: [Swift.String : Swift.String], body: T?)
+  convenience public init(response: Foundation.HTTPURLResponse, body: T?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class DefaultEndpoints {
+  open class func downloadAssetById(personId: Swift.String, assetId: Swift.String, defaultUrl: Swift.String? = nil, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func downloadAssetByIdWithRequestBuilder(personId: Swift.String, assetId: Swift.String, defaultUrl: Swift.String? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func downloadAssetById(personId: Swift.String, assetId: Swift.String, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func downloadAssetByIdWithRequestBuilder(personId: Swift.String, assetId: Swift.String) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func downloadAssetByName(personId: Swift.String, name: Swift.String? = nil, defaultUrl: Swift.String? = nil, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func downloadAssetByNameWithRequestBuilder(personId: Swift.String, name: Swift.String? = nil, defaultUrl: Swift.String? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func downloadAssetByName(personId: Swift.String, name: Swift.String? = nil, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func downloadAssetByNameWithRequestBuilder(personId: Swift.String, name: Swift.String? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func listAssets(personId: Swift.String, completion: @escaping ((_ data: [ExtoleConsumerAPIFramework.PersonAssetResponse]?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func listAssetsWithRequestBuilder(personId: Swift.String) -> ExtoleConsumerAPIFramework.RequestBuilder<[ExtoleConsumerAPIFramework.PersonAssetResponse]>
+  open class func post(zoneName: Swift.String, body: [Swift.String : Swift.String]? = nil, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func postWithRequestBuilder(zoneName: Swift.String, body: [Swift.String : Swift.String]? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func post(body: ExtoleConsumerAPIFramework.RenderZoneRequest? = nil, completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func postWithRequestBuilder(body: ExtoleConsumerAPIFramework.RenderZoneRequest? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func readAsset(personId: Swift.String, assetId: Swift.String, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.PersonAssetResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func readAssetWithRequestBuilder(personId: Swift.String, assetId: Swift.String) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.PersonAssetResponse>
+  open class func record(body: ExtoleConsumerAPIFramework.CreativeMetricRequest, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.CreativeMetricResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func recordWithRequestBuilder(body: ExtoleConsumerAPIFramework.CreativeMetricRequest) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.CreativeMetricResponse>
+  @objc deinit
+}
+public struct CreativeMetricResponse : Swift.Codable {
+  public var _id: Swift.String?
+  public init(_id: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case _id
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers open class MeRewardEndpoints {
+  open class func getRewardStatus(pollingId: Swift.String? = nil, rewardName: Swift.String? = nil, partnerEventId: Swift.String? = nil, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.PollingRewardResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func getRewardStatusWithRequestBuilder(pollingId: Swift.String? = nil, rewardName: Swift.String? = nil, partnerEventId: Swift.String? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.PollingRewardResponse>
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers open class AuthorizationEndpoints {
+  open class func createToken(body: ExtoleConsumerAPIFramework.CreateTokenRequest? = nil, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.TokenResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func createTokenWithRequestBuilder(body: ExtoleConsumerAPIFramework.CreateTokenRequest? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.TokenResponse>
+  open class func deleteToken(completion: @escaping ((_ data: Swift.Void?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func deleteTokenWithRequestBuilder() -> ExtoleConsumerAPIFramework.RequestBuilder<Swift.Void>
+  open class func getTokenDetails(completion: @escaping ((_ data: ExtoleConsumerAPIFramework.TokenResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func getTokenDetailsWithRequestBuilder() -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.TokenResponse>
+  @objc deinit
+}
+public enum JSONValue : Swift.Codable, Swift.Equatable {
+  case string(Swift.String)
+  case int(Swift.Int)
+  case double(Swift.Double)
+  case bool(Swift.Bool)
+  case object([Swift.String : ExtoleConsumerAPIFramework.JSONValue])
+  case array([ExtoleConsumerAPIFramework.JSONValue])
+  case null
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+  public static func == (a: ExtoleConsumerAPIFramework.JSONValue, b: ExtoleConsumerAPIFramework.JSONValue) -> Swift.Bool
+}
+extension ExtoleConsumerAPIFramework.JSONValue : Swift.ExpressibleByStringLiteral {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+extension ExtoleConsumerAPIFramework.JSONValue : Swift.ExpressibleByIntegerLiteral {
+  public init(integerLiteral value: Swift.Int)
+  public typealias IntegerLiteralType = Swift.Int
+}
+extension ExtoleConsumerAPIFramework.JSONValue : Swift.ExpressibleByFloatLiteral {
+  public init(floatLiteral value: Swift.Double)
+  public typealias FloatLiteralType = Swift.Double
+}
+extension ExtoleConsumerAPIFramework.JSONValue : Swift.ExpressibleByBooleanLiteral {
+  public init(booleanLiteral value: Swift.Bool)
+  public typealias BooleanLiteralType = Swift.Bool
+}
+extension ExtoleConsumerAPIFramework.JSONValue : Swift.ExpressibleByDictionaryLiteral {
+  public init(dictionaryLiteral elements: (Swift.String, ExtoleConsumerAPIFramework.JSONValue)...)
+  public typealias Key = Swift.String
+  public typealias Value = ExtoleConsumerAPIFramework.JSONValue
+}
+extension ExtoleConsumerAPIFramework.JSONValue : Swift.ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: ExtoleConsumerAPIFramework.JSONValue...)
+  public typealias ArrayLiteralElement = ExtoleConsumerAPIFramework.JSONValue
+}
+@_hasMissingDesignatedInitializers open class ZoneEndpoints {
+  open class func render(eventName: Swift.String, body: [Swift.String : Swift.String]? = nil, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.ZoneResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func renderWithRequestBuilder(eventName: Swift.String, body: [Swift.String : Swift.String]? = nil) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.ZoneResponse>
+  open class func render(body: ExtoleConsumerAPIFramework.RenderZoneRequest, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.ZoneResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func renderWithRequestBuilder(body: ExtoleConsumerAPIFramework.RenderZoneRequest) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.ZoneResponse>
+  @objc deinit
+}
+public struct PersonAssetResponse : Swift.Codable {
+  public enum Status : Swift.String, Swift.Codable {
+    case pendingReview
+    case approved
+    case denied
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum DataType : Swift.String, Swift.Codable {
+    case _public
+    case _private
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var _id: Swift.String?
+  public var name: Swift.String?
+  public var filename: Swift.String?
+  public var mimeType: Swift.String?
+  public var status: ExtoleConsumerAPIFramework.PersonAssetResponse.Status?
+  public var tags: [Swift.String]?
+  public var dataType: ExtoleConsumerAPIFramework.PersonAssetResponse.DataType?
+  public init(_id: Swift.String? = nil, name: Swift.String? = nil, filename: Swift.String? = nil, mimeType: Swift.String? = nil, status: ExtoleConsumerAPIFramework.PersonAssetResponse.Status? = nil, tags: [Swift.String]? = nil, dataType: ExtoleConsumerAPIFramework.PersonAssetResponse.DataType? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case _id
+    case name
+    case filename
+    case mimeType
+    case status
+    case tags
+    case dataType
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CreateCreativeLogRequest : Swift.Codable {
+  public enum Level : Swift.String, Swift.Codable {
+    case error
+    case warn
+    case info
+    case debug
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var message: Swift.String?
+  public var level: ExtoleConsumerAPIFramework.CreateCreativeLogRequest.Level?
+  public init(message: Swift.String? = nil, level: ExtoleConsumerAPIFramework.CreateCreativeLogRequest.Level? = nil)
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct SubmitEventRequest : Swift.Codable {
+  public var eventName: Swift.String?
+  public var jwt: Swift.String?
+  public var idToken: Swift.String?
+  public var data: [Swift.String : Swift.String]?
+  public init(eventName: Swift.String? = nil, jwt: Swift.String? = nil, idToken: Swift.String? = nil, data: [Swift.String : Swift.String]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case eventName
+    case jwt
+    case idToken
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias EncodeResult = (data: Foundation.Data?, error: (any Swift.Error)?)
+@_hasMissingDesignatedInitializers open class CodableHelper {
+  public static var dateformatter: Foundation.DateFormatter?
+  open class func decode<T>(_ type: T.Type, from data: Foundation.Data) -> (decodableObj: T?, error: (any Swift.Error)?) where T : Swift.Decodable
+  open class func encode<T>(_ value: T, prettyPrint: Swift.Bool = false) -> ExtoleConsumerAPIFramework.EncodeResult where T : Swift.Encodable
+  @objc deinit
+}
+public struct PollingRewardResponse : Swift.Codable {
+  public enum Status : Swift.String, Swift.Codable {
+    case pending
+    case succeeded
+    case failed
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var reward: ExtoleConsumerAPIFramework.RewardResponse?
+  public var status: ExtoleConsumerAPIFramework.PollingRewardResponse.Status?
+  public var qualityResults: [ExtoleConsumerAPIFramework.QualityResults]?
+  public init(reward: ExtoleConsumerAPIFramework.RewardResponse? = nil, status: ExtoleConsumerAPIFramework.PollingRewardResponse.Status? = nil, qualityResults: [ExtoleConsumerAPIFramework.QualityResults]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case reward
+    case status
+    case qualityResults
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct CreativeMetricRequest : Swift.Codable {
+  public enum MetricType : Swift.String, Swift.Codable {
+    case histogram
+    case counter
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var key: Swift.String
+  public var metricType: ExtoleConsumerAPIFramework.CreativeMetricRequest.MetricType
+  public var value: Swift.Int64
+  public init(key: Swift.String, metricType: ExtoleConsumerAPIFramework.CreativeMetricRequest.MetricType, value: Swift.Int64)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case key
+    case metricType
+    case value
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TokenResponse : Swift.Codable {
+  public enum Scopes : Swift.String, Swift.Codable {
+    case verifiedConsumer
+    case updateProfile
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var accessToken: Swift.String?
+  public var expiresIn: Swift.Int64?
+  public var scopes: [ExtoleConsumerAPIFramework.TokenResponse.Scopes]?
+  public init(accessToken: Swift.String? = nil, expiresIn: Swift.Int64? = nil, scopes: [ExtoleConsumerAPIFramework.TokenResponse.Scopes]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case accessToken
+    case expiresIn
+    case scopes
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TokenV4Response : Swift.Codable {
+  public enum Scopes : Swift.String, Swift.Codable {
+    case verifiedConsumer
+    case updateProfile
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum Capabilities : Swift.String, Swift.Codable {
+    case verifiedConsumer
+    case updateProfile
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var accessToken: Swift.String?
+  public var expiresIn: Swift.Int64?
+  public var scopes: [ExtoleConsumerAPIFramework.TokenV4Response.Scopes]?
+  public var capabilities: [ExtoleConsumerAPIFramework.TokenV4Response.Capabilities]?
+  public init(accessToken: Swift.String? = nil, expiresIn: Swift.Int64? = nil, scopes: [ExtoleConsumerAPIFramework.TokenV4Response.Scopes]? = nil, capabilities: [ExtoleConsumerAPIFramework.TokenV4Response.Capabilities]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case accessToken
+    case expiresIn
+    case scopes
+    case capabilities
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers open class AlamofireRequestBuilder<T> : ExtoleConsumerAPIFramework.RequestBuilder<T> {
+  required public init(method: Swift.String, URLString: Swift.String, parameters: [Swift.String : Any]?, isBody: Swift.Bool, headers: [Swift.String : Swift.String] = [:])
+  open func createSessionManager() -> Alamofire.Session
+  open func contentTypeForFormPart(fileURL: Foundation.URL) -> Swift.String?
+  open func makeRequest(manager: Alamofire.Session, method: Alamofire.HTTPMethod, encoding: any Alamofire.ParameterEncoding, headers: [Swift.String : Swift.String]) -> Alamofire.DataRequest
+  override open func execute(_ completion: @escaping (_ response: ExtoleConsumerAPIFramework.Response<T>?, _ error: (any Swift.Error)?) -> Swift.Void)
+  open func buildHeaders() -> Alamofire.HTTPHeaders
+  @objc deinit
+}
+public enum AlamofireDecodableRequestBuilderError : Swift.Error {
+  case emptyDataResponse
+  case nilHTTPResponse
+  case jsonDecoding(Swift.DecodingError)
+  case generalError(any Swift.Error)
+}
+@_inheritsConvenienceInitializers open class AlamofireDecodableRequestBuilder<T> : ExtoleConsumerAPIFramework.AlamofireRequestBuilder<T> where T : Swift.Decodable {
+  required public init(method: Swift.String, URLString: Swift.String, parameters: [Swift.String : Any]?, isBody: Swift.Bool, headers: [Swift.String : Swift.String] = super)
+  @objc deinit
+}
+public struct MyProfileResponse : Swift.Codable {
+  public enum CookieConsentType : Swift.String, Swift.Codable {
+    case extole
+    case client
+    case unset
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ProcessingConsentType : Swift.String, Swift.Codable {
+    case extole
+    case client
+    case unset
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var _id: Swift.String?
+  public var email: Swift.String?
+  public var firstName: Swift.String?
+  public var lastName: Swift.String?
+  public var profilePictureUrl: Swift.String?
+  public var partnerUserId: Swift.String?
+  public var cookieConsent: Swift.String?
+  public var cookieConsentType: ExtoleConsumerAPIFramework.MyProfileResponse.CookieConsentType?
+  public var processingConsent: Swift.String?
+  public var processingConsentType: ExtoleConsumerAPIFramework.MyProfileResponse.ProcessingConsentType?
+  public var parameters: [Swift.String : ExtoleConsumerAPIFramework.Entry?]?
+  public var locale: Swift.String?
+  public init(_id: Swift.String? = nil, email: Swift.String? = nil, firstName: Swift.String? = nil, lastName: Swift.String? = nil, profilePictureUrl: Swift.String? = nil, partnerUserId: Swift.String? = nil, cookieConsent: Swift.String? = nil, cookieConsentType: ExtoleConsumerAPIFramework.MyProfileResponse.CookieConsentType? = nil, processingConsent: Swift.String? = nil, processingConsentType: ExtoleConsumerAPIFramework.MyProfileResponse.ProcessingConsentType? = nil, parameters: [Swift.String : ExtoleConsumerAPIFramework.Entry?]? = nil, locale: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case _id
+    case email
+    case firstName
+    case lastName
+    case profilePictureUrl
+    case partnerUserId
+    case cookieConsent
+    case cookieConsentType
+    case processingConsent
+    case processingConsentType
+    case parameters
+    case locale
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct Id : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers open class EventEndpoints {
+  open class func fetch(eventName: Swift.String, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.SubmitEventResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func fetchWithRequestBuilder(eventName: Swift.String) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.SubmitEventResponse>
+  open class func post(body: ExtoleConsumerAPIFramework.SubmitEventRequest, completion: @escaping ((_ data: ExtoleConsumerAPIFramework.SubmitEventResponse?, _ error: (any Swift.Error)?) -> Swift.Void))
+  open class func postWithRequestBuilder(body: ExtoleConsumerAPIFramework.SubmitEventRequest) -> ExtoleConsumerAPIFramework.RequestBuilder<ExtoleConsumerAPIFramework.SubmitEventResponse>
+  @objc deinit
+}
+public struct RenderZoneRequest : Swift.Codable {
+  public var eventName: Swift.String?
+  public var jwt: Swift.String?
+  public var idToken: Swift.String?
+  public var data: [Swift.String : Swift.String]?
+  public init(eventName: Swift.String? = nil, jwt: Swift.String? = nil, idToken: Swift.String? = nil, data: [Swift.String : Swift.String]? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case eventName
+    case jwt
+    case idToken
+    case data
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers open class ExtoleConsumerAPI {
+  public static var basePath: Swift.String
+  public static var credential: Foundation.URLCredential?
+  public static var customHeaders: [Swift.String : Swift.String]
+  public static var requestBuilderFactory: any ExtoleConsumerAPIFramework.RequestBuilderFactory
+  @objc deinit
+}
+open class RequestBuilder<T> {
+  final public let parameters: [Swift.String : Any]?
+  final public let isBody: Swift.Bool
+  final public let method: Swift.String
+  public var URLString: Swift.String
+  public var onProgressReady: ((Foundation.Progress) -> ())?
+  required public init(method: Swift.String, URLString: Swift.String, parameters: [Swift.String : Any]?, isBody: Swift.Bool, headers: [Swift.String : Swift.String] = [:])
+  open func withProgramDomain(_ programDomain: Swift.String)
+  open func addHeaders(_ aHeaders: [Swift.String : Swift.String])
+  open func execute(_ completion: @escaping (_ response: ExtoleConsumerAPIFramework.Response<T>?, _ error: (any Swift.Error)?) -> Swift.Void)
+  public func addHeader(name: Swift.String, value: Swift.String) -> Self
+  open func addCredential() -> Self
+  @objc deinit
+}
+public protocol RequestBuilderFactory {
+  func getNonDecodableBuilder<T>() -> ExtoleConsumerAPIFramework.RequestBuilder<T>.Type
+  func getBuilder<T>() -> ExtoleConsumerAPIFramework.RequestBuilder<T>.Type where T : Swift.Decodable
+}
+extension Swift.String : Swift.CodingKey {
+  public var stringValue: Swift.String {
+    get
+  }
+  public init?(stringValue: Swift.String)
+  public var intValue: Swift.Int? {
+    get
+  }
+  public init?(intValue: Swift.Int)
+}
+extension Swift.KeyedEncodingContainerProtocol {
+  public mutating func encodeArray<T>(_ values: [T], forKey key: Self.Key) throws where T : Swift.Encodable
+  public mutating func encodeArrayIfPresent<T>(_ values: [T]?, forKey key: Self.Key) throws where T : Swift.Encodable
+  public mutating func encodeMap<T>(_ pairs: [Self.Key : T]) throws where T : Swift.Encodable, Self.Key : Swift.Hashable
+  public mutating func encodeMapIfPresent<T>(_ pairs: [Self.Key : T]?) throws where T : Swift.Encodable, Self.Key : Swift.Hashable
+}
+extension Swift.KeyedDecodingContainerProtocol {
+  public func decodeArray<T>(_ type: T.Type, forKey key: Self.Key) throws -> [T] where T : Swift.Decodable
+  public func decodeArrayIfPresent<T>(_ type: T.Type, forKey key: Self.Key) throws -> [T]? where T : Swift.Decodable
+  public func decodeMap<T>(_ type: T.Type, excludedKeys: Swift.Set<Self.Key>) throws -> [Self.Key : T] where T : Swift.Decodable, Self.Key : Swift.Hashable
+}
+public struct RewardResponse : Swift.Codable {
+  public enum FaceValueType : Swift.String, Swift.Codable {
+    case percentOff
+    case usd
+    case gbp
+    case eur
+    case jpy
+    case cny
+    case cad
+    case aud
+    case brl
+    case inr
+    case nzd
+    case mxn
+    case points
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum ModelType : Swift.String, Swift.Codable {
+    case tangoV2
+    case coupon
+    case customReward
+    case paypalPayouts
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var rewardId: Swift.String?
+  public var state: Swift.String?
+  public var partnerRewardId: Swift.String?
+  public var code: Swift.String?
+  public var faceValue: Swift.String?
+  public var amount: Swift.String?
+  public var faceValueType: ExtoleConsumerAPIFramework.RewardResponse.FaceValueType?
+  public var dateEarned: Swift.String?
+  public var dateIssued: Swift.String?
+  public var dateDelivered: Swift.String?
+  public var campaignId: Swift.String?
+  public var programLabel: Swift.String?
+  public var sandbox: Swift.String?
+  public var slots: [Swift.String]?
+  public var tags: [Swift.String]?
+  public var type: ExtoleConsumerAPIFramework.RewardResponse.ModelType?
+  public var rewardSupplierId: Swift.String?
+  public var partnerRewardSupplierId: Swift.String?
+  public var rewardName: Swift.String?
+  public var expiryDate: Swift.String?
+  public var redeemedDate: Swift.String?
+  public var _id: Swift.String?
+  public init(rewardId: Swift.String? = nil, state: Swift.String? = nil, partnerRewardId: Swift.String? = nil, code: Swift.String? = nil, faceValue: Swift.String? = nil, amount: Swift.String? = nil, faceValueType: ExtoleConsumerAPIFramework.RewardResponse.FaceValueType? = nil, dateEarned: Swift.String? = nil, dateIssued: Swift.String? = nil, dateDelivered: Swift.String? = nil, campaignId: Swift.String? = nil, programLabel: Swift.String? = nil, sandbox: Swift.String? = nil, slots: [Swift.String]? = nil, tags: [Swift.String]? = nil, type: ExtoleConsumerAPIFramework.RewardResponse.ModelType? = nil, rewardSupplierId: Swift.String? = nil, partnerRewardSupplierId: Swift.String? = nil, rewardName: Swift.String? = nil, expiryDate: Swift.String? = nil, redeemedDate: Swift.String? = nil, _id: Swift.String? = nil)
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case rewardId
+    case state
+    case partnerRewardId
+    case code
+    case faceValue
+    case amount
+    case faceValueType
+    case dateEarned
+    case dateIssued
+    case dateDelivered
+    case campaignId
+    case programLabel
+    case sandbox
+    case slots
+    case tags
+    case type
+    case rewardSupplierId
+    case partnerRewardSupplierId
+    case rewardName
+    case expiryDate
+    case redeemedDate
+    case _id
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension ExtoleConsumerAPIFramework.RestExceptionResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.RestExceptionResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.RestExceptionResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.ZoneResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.ZoneResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.ZoneResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.SubmitEventResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.SubmitEventResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.SubmitEventResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.QualityResults.Score : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.QualityResults.Score : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.QualityResults.Score : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.QualityResults.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.QualityResults.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.QualityResults.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.CreateCreativeLogResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.CreateCreativeLogResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.CreateCreativeLogResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.CreateTokenRequest.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.CreateTokenRequest.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.CreateTokenRequest.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.QualityRuleResult.Score : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.QualityRuleResult.Score : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.QualityRuleResult.Score : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.QualityRuleResult.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.QualityRuleResult.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.QualityRuleResult.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.Status : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.Status : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.Status : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.DataType : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.DataType : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.DataType : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.PersonAssetResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.CreateCreativeLogRequest.Level : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.CreateCreativeLogRequest.Level : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.CreateCreativeLogRequest.Level : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.SubmitEventRequest.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.SubmitEventRequest.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.SubmitEventRequest.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.PollingRewardResponse.Status : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.PollingRewardResponse.Status : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.PollingRewardResponse.Status : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.PollingRewardResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.PollingRewardResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.PollingRewardResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricRequest.MetricType : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricRequest.MetricType : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricRequest.MetricType : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricRequest.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricRequest.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.CreativeMetricRequest.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.TokenResponse.Scopes : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.TokenResponse.Scopes : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.TokenResponse.Scopes : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.TokenResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.TokenResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.TokenResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.Scopes : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.Scopes : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.Scopes : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.Capabilities : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.Capabilities : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.Capabilities : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.TokenV4Response.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.CookieConsentType : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.CookieConsentType : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.CookieConsentType : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.ProcessingConsentType : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.ProcessingConsentType : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.ProcessingConsentType : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.MyProfileResponse.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.RenderZoneRequest.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.RenderZoneRequest.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.RenderZoneRequest.CodingKeys : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.FaceValueType : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.FaceValueType : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.FaceValueType : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.ModelType : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.ModelType : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.ModelType : Swift.RawRepresentable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.CodingKeys : Swift.Equatable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.CodingKeys : Swift.Hashable {}
+extension ExtoleConsumerAPIFramework.RewardResponse.CodingKeys : Swift.RawRepresentable {}

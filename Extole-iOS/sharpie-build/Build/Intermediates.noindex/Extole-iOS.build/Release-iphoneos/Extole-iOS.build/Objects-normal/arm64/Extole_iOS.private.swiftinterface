@@ -1,0 +1,329 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name Extole_iOS
+import AdSupport
+import Combine
+import CryptoKit
+import ExtoleConsumerAPIFramework
+@_exported import Extole_iOS
+import Foundation
+import JavaScriptCore
+import Logging
+import ObjectMapper
+import Swift
+import SwiftEventBus
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_hasMissingDesignatedInitializers public class Id<Element> {
+  public func getValue() -> Swift.String
+  @objc deinit
+}
+@_Concurrency.MainActor(unsafe) public struct ExtoleView : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10Extole_iOS0A4ViewV4bodyQrvp", 0) __
+}
+@_hasMissingDesignatedInitializers public class ExtoleObservableUi : Foundation.ObservableObject {
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+}
+public protocol Campaign : Extole_iOS.Extole {
+  func getProgram() -> Swift.String
+  func getId() -> Extole_iOS.Id<any Extole_iOS.Campaign>
+}
+extension Extole_iOS.Campaign {
+  public func webView(headers: [Swift.String : Swift.String] = [:], data: [Swift.String : Swift.String] = [:]) -> any Extole_iOS.ExtoleWebView
+}
+@_hasMissingDesignatedInitializers public class Me {
+  final public let email: Swift.String?
+  final public let firstName: Swift.String?
+  final public let lastName: Swift.String?
+  final public let partnerUserId: Swift.String?
+  final public let profilePictureUrl: Swift.String?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ExtoleOperation : ObjectMapper.Mappable {
+  public func executeActions(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  public func passingConditions(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl) -> [Extole_iOS.Condition]
+  public func actionsToExecute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl) -> [Extole_iOS.Action]
+  required public init?(map: ObjectMapper.Map)
+  public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+public protocol ExtoleWebView {
+  func getWebView() -> WebKit.WKWebView
+  func load(_ zone: Swift.String)
+}
+public protocol RewardService {
+  func pollReward(pollingId: Swift.String, timeoutSeconds: Swift.Int, retries: Swift.Int, completion: @escaping (ExtoleConsumerAPIFramework.PollingRewardResponse?, (any Swift.Error)?) -> Swift.Void)
+}
+extension Extole_iOS.RewardService {
+  public func pollReward(pollingId: Swift.String, timeoutSeconds: Swift.Int = 5, retries: Swift.Int = 5, completion: @escaping (ExtoleConsumerAPIFramework.PollingRewardResponse?, (any Swift.Error)?) -> Swift.Void)
+}
+public class ExtoleImpl : Extole_iOS.Extole {
+  public var PARTNER_SHARE_ID_PREFRENCES_KEY: Swift.String
+  public var ACCESS_TOKEN_PREFERENCES_KEY: Swift.String
+  public var EXTOLE_SDK_TAG: Swift.String
+  public var operations: [Extole_iOS.ExtoleOperation]
+  public var zones: Extole_iOS.Zones
+  public init(programDomain: Swift.String, applicationName: Swift.String, personIdentifier: Swift.String? = nil, applicationData: [Swift.String : Swift.String] = [:], data: [Swift.String : Swift.String] = [:], labels: [Swift.String] = [], sandbox: Swift.String = "production-production", logHandlers: [any Logging.LogHandler] = [], listenToEvents: Swift.Bool = true, disabledActions: [Extole_iOS.ActionType] = [], jwt: Swift.String? = nil)
+  public func fetchZone(_ zoneName: Swift.String, _ data: [Swift.String : Swift.String], completion: @escaping (Extole_iOS.Zone?, (any Extole_iOS.Campaign)?, (any Swift.Error)?) -> Swift.Void)
+  public func getServices() -> Extole_iOS.ExtoleServices
+  public func sendEvent(_ eventName: Swift.String, _ data: [Swift.String : Any?], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?, _ jwt: Swift.String? = nil)
+  public func sendEvent(_ eventName: Swift.String, _ data: [Swift.String : Any?], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?)
+  public func getView() -> Extole_iOS.ExtoleView
+  public func copy(programDomain: Swift.String? = nil, applicationName: Swift.String? = nil, email: Swift.String? = nil, applicationData: [Swift.String : Swift.String]? = nil, data: [Swift.String : Swift.String]? = nil, labels: [Swift.String]? = nil, sandbox: Swift.String? = nil, logHandlers: [any Logging.LogHandler] = [], listenToEvents: Swift.Bool = true, jwt: Swift.String? = nil) -> any Extole_iOS.Extole
+  public func webView(headers: [Swift.String : Swift.String] = [:], data: [Swift.String : Swift.String] = [:]) -> any Extole_iOS.ExtoleWebView
+  public func getLogger() -> any Extole_iOS.ExtoleLogger
+  public func getHeaders() -> [Swift.String : Swift.String]
+  public func identify(_ identifier: Swift.String, _ data: [Swift.String : Any?] = [:], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?)
+  public func identifyJwt(_ jwt: Swift.String, _ data: [Swift.String : Any?] = [:], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?)
+  public func logout()
+  public func getDisabledActions() -> [Extole_iOS.ActionType]
+  public func getJsonConfiguration() -> Swift.String?
+  public func getAccessToken() -> Swift.String?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NoOpAction : Extole_iOS.Action {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class PromptAction : Extole_iOS.Action, Swift.CustomStringConvertible {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  public func getMessage() -> Swift.String?
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public protocol ShareService {
+  func emailShare(_ recipient: Swift.String, _ subject: Swift.String, _ message: Swift.String, _ data: [Swift.String : Any?], _ completion: @escaping (Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class FetchAction : Extole_iOS.Action, Swift.CustomStringConvertible {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  public func getZones() -> [Swift.String]?
+  public func getData() -> [Swift.String : Swift.String]?
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class LoadOperationsAction : Extole_iOS.Action, Swift.Hashable, Swift.Equatable, Swift.CustomStringConvertible {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  public func getZones() -> [Swift.String]?
+  public func getData() -> [Swift.String : Swift.String]?
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  public static func == (lhs: Extole_iOS.LoadOperationsAction, rhs: Extole_iOS.LoadOperationsAction) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class Action : ObjectMapper.StaticMappable, ObjectMapper.Mappable {
+  public static var customActionTypes: [Swift.String : Extole_iOS.Action]
+  open func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  open func getType() -> Extole_iOS.ActionType
+  public init()
+  required public init?(map: ObjectMapper.Map)
+  open func mapping(map: ObjectMapper.Map)
+  public static func objectForMapping(map: ObjectMapper.Map) -> (any ObjectMapper.BaseMappable)?
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class ViewFullScreenAction : Extole_iOS.Action, Swift.CustomStringConvertible {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  public func getZoneName() -> Swift.String?
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ExtoleServices {
+  public func getZoneFetcher() -> Extole_iOS.ZoneFetcher
+  public func getRewardService() -> any Extole_iOS.RewardService
+  public func getShareService() -> any Extole_iOS.ShareService
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Zones {
+  public var zonesResponse: [Swift.String : Extole_iOS.Zone?]
+  @objc deinit
+}
+public struct UIExtoleWebView : SwiftUI.UIViewRepresentable {
+  public init(_ extoleWebView: any Extole_iOS.ExtoleWebView, _ zoneName: Swift.String)
+  public init(_ programDomain: Swift.String, _ zoneName: Swift.String, _ queryParameters: inout [Swift.String : Swift.String], _ headers: inout [Swift.String : Swift.String])
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: Extole_iOS.UIExtoleWebView.Context) -> WebKit.WKWebView
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ webView: WebKit.WKWebView, context: Extole_iOS.UIExtoleWebView.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = WebKit.WKWebView
+}
+public class AppEvent : Swift.CustomStringConvertible {
+  final public let eventName: Swift.String
+  final public let eventData: [Swift.String : Any?]
+  public init(_ eventName: Swift.String, _ eventData: [Swift.String : Any?] = [:])
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Zone {
+  final public let content: [Swift.String : ExtoleConsumerAPIFramework.Entry?]?
+  final public let zoneName: Swift.String
+  final public let campaignId: Extole_iOS.Id<any Extole_iOS.Campaign>
+  public func getName() -> Swift.String
+  public func tap()
+  public func viewed()
+  public func get(_ dottedPath: Swift.String) -> Any?
+  @objc deinit
+}
+public protocol ExtoleLogger {
+  func setLogLevel(level: Extole_iOS.LogLevel)
+  func getLogLevel() -> Extole_iOS.LogLevel
+  func debug(_ message: Swift.String, args: Any?...)
+  func info(_ message: Swift.String, args: Any?...)
+  func warn(_ message: Swift.String, args: Any?...)
+  func error(_ message: Swift.String, args: Any?...)
+  func error(_ exception: any Swift.Error, _ message: Swift.String, args: Any?...)
+}
+public enum LogLevel {
+  case disable
+  case debug
+  case info
+  case warn
+  case error
+  public static func == (a: Extole_iOS.LogLevel, b: Extole_iOS.LogLevel) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class Condition : ObjectMapper.StaticMappable, ObjectMapper.Mappable {
+  public static var customConditionTypes: [Swift.String : Extole_iOS.Condition]
+  open func passes(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl) -> Swift.Bool
+  open func getType() -> Extole_iOS.ConditionType
+  public init()
+  required public init?(map: ObjectMapper.Map)
+  open func mapping(map: ObjectMapper.Map)
+  public static func objectForMapping(map: ObjectMapper.Map) -> (any ObjectMapper.BaseMappable)?
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Event {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZoneResponseKey : Swift.Hashable, Swift.Comparable {
+  final public let zoneName: Swift.String
+  public static func == (leftHandSide: Extole_iOS.ZoneResponseKey, rightHandSite: Extole_iOS.ZoneResponseKey) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func < (lhs: Extole_iOS.ZoneResponseKey, rhs: Extole_iOS.ZoneResponseKey) -> Swift.Bool
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ActionType : Swift.String, Swift.Decodable {
+  case NOT_DEFINED
+  case VIEW_FULLSCREEN
+  case PROMPT
+  case SET_LOG_LEVEL
+  case FETCH
+  case LOAD_OPERATIONS
+  case NATIVE_SHARE
+  case CUSTOM
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class NativeShareAction : Extole_iOS.Action, Swift.CustomStringConvertible {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+public protocol Extole {
+  func fetchZone(_ zoneName: Swift.String, _ data: [Swift.String : Swift.String], completion: @escaping (Extole_iOS.Zone?, (any Extole_iOS.Campaign)?, (any Swift.Error)?) -> Swift.Void)
+  func getServices() -> Extole_iOS.ExtoleServices
+  func sendEvent(_ eventName: Swift.String, _ data: [Swift.String : Any?], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?)
+  func sendEvent(_ eventName: Swift.String, _ data: [Swift.String : Any?], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?, _ jwt: Swift.String?)
+  func identify(_ email: Swift.String, _ data: [Swift.String : Any?], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?)
+  func identifyJwt(_ jwt: Swift.String, _ data: [Swift.String : Any?], _ completion: ((Extole_iOS.Id<Extole_iOS.Event>?, (any Swift.Error)?) -> Swift.Void)?)
+  func webView(headers: [Swift.String : Swift.String], data: [Swift.String : Swift.String]) -> any Extole_iOS.ExtoleWebView
+  func getLogger() -> any Extole_iOS.ExtoleLogger
+  func getView() -> Extole_iOS.ExtoleView
+  func logout()
+  func copy(programDomain: Swift.String?, applicationName: Swift.String?, email: Swift.String?, applicationData: [Swift.String : Swift.String]?, data: [Swift.String : Swift.String]?, labels: [Swift.String]?, sandbox: Swift.String?, debugEnabled: Swift.Bool?, logHandlers: [any Logging.LogHandler], listenToEvents: Swift.Bool, jwt: Swift.String?) -> any Extole_iOS.Extole
+  var EXTOLE_SDK_TAG: Swift.String { get }
+  var ACCESS_TOKEN_PREFERENCES_KEY: Swift.String { get }
+  var PARTNER_SHARE_ID_PREFRENCES_KEY: Swift.String { get }
+}
+extension Extole_iOS.Extole {
+  public func copy(programDomain: Swift.String? = nil, applicationName: Swift.String? = nil, email: Swift.String? = nil, applicationData: [Swift.String : Swift.String]? = nil, data: [Swift.String : Swift.String]? = nil, labels: [Swift.String]? = nil, sandbox: Swift.String? = nil, debugEnabled: Swift.Bool? = nil, logHandlers: [any Logging.LogHandler] = [], listenToEvents: Swift.Bool = true, jwt: Swift.String? = nil) -> any Extole_iOS.Extole
+  public func webView(headers: [Swift.String : Swift.String] = [:], data: [Swift.String : Swift.String] = [:]) -> any Extole_iOS.ExtoleWebView
+}
+public enum ConditionType : Swift.String, Swift.Decodable {
+  case NOT_DEFINED
+  case EVENT
+  case CUSTOM
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class SetLogLevelAction : Extole_iOS.Action, Swift.CustomStringConvertible {
+  public static var type: Extole_iOS.ActionType
+  override public func execute(event: Extole_iOS.AppEvent, extole: Extole_iOS.ExtoleImpl)
+  public func getLogLevel() -> Swift.String?
+  override public func getType() -> Extole_iOS.ActionType
+  required public init?(map: ObjectMapper.Map)
+  override public func mapping(map: ObjectMapper.Map)
+  public var description: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ZoneFetcher {
+  public func getZones(zonesName: [Swift.String], data: [Swift.String : Any?], programLabels: [Swift.String], customHeaders: [Swift.String : Swift.String], completion: @escaping ([Extole_iOS.ZoneResponseKey : Extole_iOS.Zone?]) -> Swift.Void)
+  @objc deinit
+}
+extension Extole_iOS.LogLevel : Swift.Equatable {}
+extension Extole_iOS.LogLevel : Swift.Hashable {}
+extension Extole_iOS.ActionType : Swift.Equatable {}
+extension Extole_iOS.ActionType : Swift.Hashable {}
+extension Extole_iOS.ActionType : Swift.RawRepresentable {}
+extension Extole_iOS.ConditionType : Swift.Equatable {}
+extension Extole_iOS.ConditionType : Swift.Hashable {}
+extension Extole_iOS.ConditionType : Swift.RawRepresentable {}

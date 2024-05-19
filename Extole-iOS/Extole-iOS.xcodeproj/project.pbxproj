@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DD4377AA2BDC083E0065F8EC /* Extole_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = DD4377A92BDC083E0065F8EC /* Extole_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD4378AD2BDC085D0065F8EC /* FetchAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43781A2BDC085D0065F8EC /* FetchAction.swift */; };
+		DD4378AE2BDC085D0065F8EC /* LoadOperationsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43781B2BDC085D0065F8EC /* LoadOperationsAction.swift */; };
+		DD4378AF2BDC085D0065F8EC /* NativeShareAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43781C2BDC085D0065F8EC /* NativeShareAction.swift */; };
+		DD4378B02BDC085D0065F8EC /* NoOpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43781D2BDC085D0065F8EC /* NoOpAction.swift */; };
+		DD4378B12BDC085D0065F8EC /* PromptAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43781E2BDC085D0065F8EC /* PromptAction.swift */; };
+		DD4378B22BDC085D0065F8EC /* SetLogLevelAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43781F2BDC085D0065F8EC /* SetLogLevelAction.swift */; };
+		DD4378B32BDC085D0065F8EC /* ViewFullScreenAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378202BDC085D0065F8EC /* ViewFullScreenAction.swift */; };
+		DD4378B42BDC085D0065F8EC /* EventCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378222BDC085D0065F8EC /* EventCondition.swift */; };
+		DD4378B52BDC085D0065F8EC /* NoOpCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378232BDC085D0065F8EC /* NoOpCondition.swift */; };
+		DD4378B62BDC085D0065F8EC /* ExtoleObservableUi.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378252BDC085D0065F8EC /* ExtoleObservableUi.swift */; };
+		DD4378B72BDC085D0065F8EC /* ExtoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378262BDC085D0065F8EC /* ExtoleView.swift */; };
+		DD4378B82BDC085D0065F8EC /* PromptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378272BDC085D0065F8EC /* PromptView.swift */; };
+		DD4378B92BDC085D0065F8EC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378292BDC085D0065F8EC /* App.swift */; };
+		DD4378BA2BDC085D0065F8EC /* AppEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43782A2BDC085D0065F8EC /* AppEngine.swift */; };
+		DD4378BB2BDC085D0065F8EC /* AppEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43782B2BDC085D0065F8EC /* AppEvent.swift */; };
+		DD4378BC2BDC085D0065F8EC /* ExtoleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43782C2BDC085D0065F8EC /* ExtoleOperation.swift */; };
+		DD4378BD2BDC085D0065F8EC /* CampaignImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43782E2BDC085D0065F8EC /* CampaignImpl.swift */; };
+		DD4378BE2BDC085D0065F8EC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43782F2BDC085D0065F8EC /* Extension.swift */; };
+		DD4378BF2BDC085D0065F8EC /* ExtoleImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378302BDC085D0065F8EC /* ExtoleImpl.swift */; };
+		DD4378C02BDC085D0065F8EC /* ExtoleLoggerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378312BDC085D0065F8EC /* ExtoleLoggerImpl.swift */; };
+		DD4378C12BDC085D0065F8EC /* ExtoleLogHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378322BDC085D0065F8EC /* ExtoleLogHandler.swift */; };
+		DD4378C22BDC085D0065F8EC /* ExtoleWebViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378332BDC085D0065F8EC /* ExtoleWebViewService.swift */; };
+		DD4378C32BDC085D0065F8EC /* RewardServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378342BDC085D0065F8EC /* RewardServiceImpl.swift */; };
+		DD4378C42BDC085D0065F8EC /* ShareServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378352BDC085D0065F8EC /* ShareServiceImpl.swift */; };
+		DD4378C52BDC085D0065F8EC /* ZoneFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378362BDC085D0065F8EC /* ZoneFetcher.swift */; };
+		DD4378C62BDC085D0065F8EC /* ZoneResponseKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378372BDC085D0065F8EC /* ZoneResponseKey.swift */; };
+		DD4378C72BDC085D0065F8EC /* Zones.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378382BDC085D0065F8EC /* Zones.swift */; };
+		DD4378C82BDC085D0065F8EC /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43783A2BDC085D0065F8EC /* Action.swift */; };
+		DD4378C92BDC085D0065F8EC /* ActionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43783B2BDC085D0065F8EC /* ActionType.swift */; };
+		DD4378CA2BDC085D0065F8EC /* Campaign.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43783C2BDC085D0065F8EC /* Campaign.swift */; };
+		DD4378CB2BDC085D0065F8EC /* Condition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43783D2BDC085D0065F8EC /* Condition.swift */; };
+		DD4378CC2BDC085D0065F8EC /* ConditionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43783E2BDC085D0065F8EC /* ConditionType.swift */; };
+		DD4378CD2BDC085D0065F8EC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD43783F2BDC085D0065F8EC /* Event.swift */; };
+		DD4378CE2BDC085D0065F8EC /* Extole.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378402BDC085D0065F8EC /* Extole.swift */; };
+		DD4378CF2BDC085D0065F8EC /* ExtoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378412BDC085D0065F8EC /* ExtoleLogger.swift */; };
+		DD4378D02BDC085D0065F8EC /* ExtoleServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378422BDC085D0065F8EC /* ExtoleServices.swift */; };
+		DD4378D12BDC085D0065F8EC /* ExtoleWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378432BDC085D0065F8EC /* ExtoleWebView.swift */; };
+		DD4378D22BDC085D0065F8EC /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378442BDC085D0065F8EC /* Id.swift */; };
+		DD4378D32BDC085D0065F8EC /* Me.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378452BDC085D0065F8EC /* Me.swift */; };
+		DD4378D42BDC085D0065F8EC /* RewardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378462BDC085D0065F8EC /* RewardService.swift */; };
+		DD4378D52BDC085D0065F8EC /* ShareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378472BDC085D0065F8EC /* ShareService.swift */; };
+		DD4378D62BDC085D0065F8EC /* Zone.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4378482BDC085D0065F8EC /* Zone.swift */; };
+		DD7BB0762BDE68690021A579 /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06C2BDE68660021A579 /* Alamofire.xcframework */; };
+		DD7BB0772BDE68690021A579 /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06C2BDE68660021A579 /* Alamofire.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD7BB0782BDE686A0021A579 /* ExtoleConsumerAPIFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB0702BDE68660021A579 /* ExtoleConsumerAPIFramework.xcframework */; };
+		DD7BB0792BDE686A0021A579 /* ExtoleConsumerAPIFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB0702BDE68660021A579 /* ExtoleConsumerAPIFramework.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD7BB07A2BDE686B0021A579 /* Logging.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06D2BDE68660021A579 /* Logging.xcframework */; };
+		DD7BB07B2BDE686B0021A579 /* Logging.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06D2BDE68660021A579 /* Logging.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD7BB07C2BDE686D0021A579 /* ObjectMapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06F2BDE68660021A579 /* ObjectMapper.xcframework */; };
+		DD7BB07D2BDE686D0021A579 /* ObjectMapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06F2BDE68660021A579 /* ObjectMapper.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DD7BB07E2BDE686E0021A579 /* SwiftEventBus.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06E2BDE68660021A579 /* SwiftEventBus.xcframework */; };
+		DD7BB07F2BDE686E0021A579 /* SwiftEventBus.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD7BB06E2BDE68660021A579 /* SwiftEventBus.xcframework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DD7BAFA82BDC3B600021A579 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DD7BB0792BDE686A0021A579 /* ExtoleConsumerAPIFramework.xcframework in Embed Frameworks */,
+				DD7BB07B2BDE686B0021A579 /* Logging.xcframework in Embed Frameworks */,
+				DD7BB0772BDE68690021A579 /* Alamofire.xcframework in Embed Frameworks */,
+				DD7BB07D2BDE686D0021A579 /* ObjectMapper.xcframework in Embed Frameworks */,
+				DD7BB07F2BDE686E0021A579 /* SwiftEventBus.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DD4377A62BDC083E0065F8EC /* Extole_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Extole_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD4377A92BDC083E0065F8EC /* Extole_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Extole_iOS.h; sourceTree = "<group>"; };
+		DD43781A2BDC085D0065F8EC /* FetchAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchAction.swift; sourceTree = "<group>"; };
+		DD43781B2BDC085D0065F8EC /* LoadOperationsAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadOperationsAction.swift; sourceTree = "<group>"; };
+		DD43781C2BDC085D0065F8EC /* NativeShareAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NativeShareAction.swift; sourceTree = "<group>"; };
+		DD43781D2BDC085D0065F8EC /* NoOpAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoOpAction.swift; sourceTree = "<group>"; };
+		DD43781E2BDC085D0065F8EC /* PromptAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptAction.swift; sourceTree = "<group>"; };
+		DD43781F2BDC085D0065F8EC /* SetLogLevelAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetLogLevelAction.swift; sourceTree = "<group>"; };
+		DD4378202BDC085D0065F8EC /* ViewFullScreenAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFullScreenAction.swift; sourceTree = "<group>"; };
+		DD4378222BDC085D0065F8EC /* EventCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCondition.swift; sourceTree = "<group>"; };
+		DD4378232BDC085D0065F8EC /* NoOpCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoOpCondition.swift; sourceTree = "<group>"; };
+		DD4378252BDC085D0065F8EC /* ExtoleObservableUi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleObservableUi.swift; sourceTree = "<group>"; };
+		DD4378262BDC085D0065F8EC /* ExtoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleView.swift; sourceTree = "<group>"; };
+		DD4378272BDC085D0065F8EC /* PromptView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptView.swift; sourceTree = "<group>"; };
+		DD4378292BDC085D0065F8EC /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		DD43782A2BDC085D0065F8EC /* AppEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEngine.swift; sourceTree = "<group>"; };
+		DD43782B2BDC085D0065F8EC /* AppEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEvent.swift; sourceTree = "<group>"; };
+		DD43782C2BDC085D0065F8EC /* ExtoleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleOperation.swift; sourceTree = "<group>"; };
+		DD43782E2BDC085D0065F8EC /* CampaignImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampaignImpl.swift; sourceTree = "<group>"; };
+		DD43782F2BDC085D0065F8EC /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DD4378302BDC085D0065F8EC /* ExtoleImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleImpl.swift; sourceTree = "<group>"; };
+		DD4378312BDC085D0065F8EC /* ExtoleLoggerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleLoggerImpl.swift; sourceTree = "<group>"; };
+		DD4378322BDC085D0065F8EC /* ExtoleLogHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleLogHandler.swift; sourceTree = "<group>"; };
+		DD4378332BDC085D0065F8EC /* ExtoleWebViewService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleWebViewService.swift; sourceTree = "<group>"; };
+		DD4378342BDC085D0065F8EC /* RewardServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardServiceImpl.swift; sourceTree = "<group>"; };
+		DD4378352BDC085D0065F8EC /* ShareServiceImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareServiceImpl.swift; sourceTree = "<group>"; };
+		DD4378362BDC085D0065F8EC /* ZoneFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneFetcher.swift; sourceTree = "<group>"; };
+		DD4378372BDC085D0065F8EC /* ZoneResponseKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoneResponseKey.swift; sourceTree = "<group>"; };
+		DD4378382BDC085D0065F8EC /* Zones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zones.swift; sourceTree = "<group>"; };
+		DD43783A2BDC085D0065F8EC /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		DD43783B2BDC085D0065F8EC /* ActionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionType.swift; sourceTree = "<group>"; };
+		DD43783C2BDC085D0065F8EC /* Campaign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Campaign.swift; sourceTree = "<group>"; };
+		DD43783D2BDC085D0065F8EC /* Condition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Condition.swift; sourceTree = "<group>"; };
+		DD43783E2BDC085D0065F8EC /* ConditionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConditionType.swift; sourceTree = "<group>"; };
+		DD43783F2BDC085D0065F8EC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		DD4378402BDC085D0065F8EC /* Extole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extole.swift; sourceTree = "<group>"; };
+		DD4378412BDC085D0065F8EC /* ExtoleLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleLogger.swift; sourceTree = "<group>"; };
+		DD4378422BDC085D0065F8EC /* ExtoleServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleServices.swift; sourceTree = "<group>"; };
+		DD4378432BDC085D0065F8EC /* ExtoleWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtoleWebView.swift; sourceTree = "<group>"; };
+		DD4378442BDC085D0065F8EC /* Id.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		DD4378452BDC085D0065F8EC /* Me.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Me.swift; sourceTree = "<group>"; };
+		DD4378462BDC085D0065F8EC /* RewardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardService.swift; sourceTree = "<group>"; };
+		DD4378472BDC085D0065F8EC /* ShareService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareService.swift; sourceTree = "<group>"; };
+		DD4378482BDC085D0065F8EC /* Zone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Zone.swift; sourceTree = "<group>"; };
+		DD7BB06C2BDE68660021A579 /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Alamofire.xcframework; sourceTree = "<group>"; };
+		DD7BB06D2BDE68660021A579 /* Logging.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Logging.xcframework; sourceTree = "<group>"; };
+		DD7BB06E2BDE68660021A579 /* SwiftEventBus.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SwiftEventBus.xcframework; sourceTree = "<group>"; };
+		DD7BB06F2BDE68660021A579 /* ObjectMapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ObjectMapper.xcframework; sourceTree = "<group>"; };
+		DD7BB0702BDE68660021A579 /* ExtoleConsumerAPIFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ExtoleConsumerAPIFramework.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD4377A32BDC083E0065F8EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD7BB0762BDE68690021A579 /* Alamofire.xcframework in Frameworks */,
+				DD7BB0782BDE686A0021A579 /* ExtoleConsumerAPIFramework.xcframework in Frameworks */,
+				DD7BB07A2BDE686B0021A579 /* Logging.xcframework in Frameworks */,
+				DD7BB07C2BDE686D0021A579 /* ObjectMapper.xcframework in Frameworks */,
+				DD7BB07E2BDE686E0021A579 /* SwiftEventBus.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DD43779C2BDC083E0065F8EC = {
+			isa = PBXGroup;
+			children = (
+				DD7BB06C2BDE68660021A579 /* Alamofire.xcframework */,
+				DD7BB0702BDE68660021A579 /* ExtoleConsumerAPIFramework.xcframework */,
+				DD7BB06D2BDE68660021A579 /* Logging.xcframework */,
+				DD7BB06F2BDE68660021A579 /* ObjectMapper.xcframework */,
+				DD7BB06E2BDE68660021A579 /* SwiftEventBus.xcframework */,
+				DD4377A82BDC083E0065F8EC /* Extole-iOS */,
+				DD4377A72BDC083E0065F8EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DD4377A72BDC083E0065F8EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DD4377A62BDC083E0065F8EC /* Extole_iOS.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD4377A82BDC083E0065F8EC /* Extole-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DD4378392BDC085D0065F8EC /* impl */,
+				DD43783A2BDC085D0065F8EC /* Action.swift */,
+				DD43783B2BDC085D0065F8EC /* ActionType.swift */,
+				DD43783C2BDC085D0065F8EC /* Campaign.swift */,
+				DD43783D2BDC085D0065F8EC /* Condition.swift */,
+				DD43783E2BDC085D0065F8EC /* ConditionType.swift */,
+				DD43783F2BDC085D0065F8EC /* Event.swift */,
+				DD4378402BDC085D0065F8EC /* Extole.swift */,
+				DD4378412BDC085D0065F8EC /* ExtoleLogger.swift */,
+				DD4378422BDC085D0065F8EC /* ExtoleServices.swift */,
+				DD4378432BDC085D0065F8EC /* ExtoleWebView.swift */,
+				DD4378442BDC085D0065F8EC /* Id.swift */,
+				DD4378452BDC085D0065F8EC /* Me.swift */,
+				DD4378462BDC085D0065F8EC /* RewardService.swift */,
+				DD4378472BDC085D0065F8EC /* ShareService.swift */,
+				DD4378482BDC085D0065F8EC /* Zone.swift */,
+				DD4377A92BDC083E0065F8EC /* Extole_iOS.h */,
+			);
+			path = "Extole-iOS";
+			sourceTree = "<group>";
+		};
+		DD4378212BDC085D0065F8EC /* action */ = {
+			isa = PBXGroup;
+			children = (
+				DD43781A2BDC085D0065F8EC /* FetchAction.swift */,
+				DD43781B2BDC085D0065F8EC /* LoadOperationsAction.swift */,
+				DD43781C2BDC085D0065F8EC /* NativeShareAction.swift */,
+				DD43781D2BDC085D0065F8EC /* NoOpAction.swift */,
+				DD43781E2BDC085D0065F8EC /* PromptAction.swift */,
+				DD43781F2BDC085D0065F8EC /* SetLogLevelAction.swift */,
+				DD4378202BDC085D0065F8EC /* ViewFullScreenAction.swift */,
+			);
+			path = action;
+			sourceTree = "<group>";
+		};
+		DD4378242BDC085D0065F8EC /* condition */ = {
+			isa = PBXGroup;
+			children = (
+				DD4378222BDC085D0065F8EC /* EventCondition.swift */,
+				DD4378232BDC085D0065F8EC /* NoOpCondition.swift */,
+			);
+			path = condition;
+			sourceTree = "<group>";
+		};
+		DD4378282BDC085D0065F8EC /* swiftui */ = {
+			isa = PBXGroup;
+			children = (
+				DD4378252BDC085D0065F8EC /* ExtoleObservableUi.swift */,
+				DD4378262BDC085D0065F8EC /* ExtoleView.swift */,
+				DD4378272BDC085D0065F8EC /* PromptView.swift */,
+			);
+			path = swiftui;
+			sourceTree = "<group>";
+		};
+		DD43782D2BDC085D0065F8EC /* app */ = {
+			isa = PBXGroup;
+			children = (
+				DD4378212BDC085D0065F8EC /* action */,
+				DD4378242BDC085D0065F8EC /* condition */,
+				DD4378282BDC085D0065F8EC /* swiftui */,
+				DD4378292BDC085D0065F8EC /* App.swift */,
+				DD43782A2BDC085D0065F8EC /* AppEngine.swift */,
+				DD43782B2BDC085D0065F8EC /* AppEvent.swift */,
+				DD43782C2BDC085D0065F8EC /* ExtoleOperation.swift */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		DD4378392BDC085D0065F8EC /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				DD43782D2BDC085D0065F8EC /* app */,
+				DD43782E2BDC085D0065F8EC /* CampaignImpl.swift */,
+				DD43782F2BDC085D0065F8EC /* Extension.swift */,
+				DD4378302BDC085D0065F8EC /* ExtoleImpl.swift */,
+				DD4378312BDC085D0065F8EC /* ExtoleLoggerImpl.swift */,
+				DD4378322BDC085D0065F8EC /* ExtoleLogHandler.swift */,
+				DD4378332BDC085D0065F8EC /* ExtoleWebViewService.swift */,
+				DD4378342BDC085D0065F8EC /* RewardServiceImpl.swift */,
+				DD4378352BDC085D0065F8EC /* ShareServiceImpl.swift */,
+				DD4378362BDC085D0065F8EC /* ZoneFetcher.swift */,
+				DD4378372BDC085D0065F8EC /* ZoneResponseKey.swift */,
+				DD4378382BDC085D0065F8EC /* Zones.swift */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DD4377A12BDC083E0065F8EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4377AA2BDC083E0065F8EC /* Extole_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		DD4377A52BDC083E0065F8EC /* Extole-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD4377AD2BDC083E0065F8EC /* Build configuration list for PBXNativeTarget "Extole-iOS" */;
+			buildPhases = (
+				DD4377A12BDC083E0065F8EC /* Headers */,
+				DD4377A22BDC083E0065F8EC /* Sources */,
+				DD4377A32BDC083E0065F8EC /* Frameworks */,
+				DD4377A42BDC083E0065F8EC /* Resources */,
+				DD7BAFA82BDC3B600021A579 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Extole-iOS";
+			productName = "Extole-iOS";
+			productReference = DD4377A62BDC083E0065F8EC /* Extole_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DD43779D2BDC083E0065F8EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					DD4377A52BDC083E0065F8EC = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = DD4377A02BDC083E0065F8EC /* Build configuration list for PBXProject "Extole-iOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DD43779C2BDC083E0065F8EC;
+			productRefGroup = DD4377A72BDC083E0065F8EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DD4377A52BDC083E0065F8EC /* Extole-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DD4377A42BDC083E0065F8EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DD4377A22BDC083E0065F8EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD4378D22BDC085D0065F8EC /* Id.swift in Sources */,
+				DD4378B72BDC085D0065F8EC /* ExtoleView.swift in Sources */,
+				DD4378B62BDC085D0065F8EC /* ExtoleObservableUi.swift in Sources */,
+				DD4378B92BDC085D0065F8EC /* App.swift in Sources */,
+				DD4378CA2BDC085D0065F8EC /* Campaign.swift in Sources */,
+				DD4378D32BDC085D0065F8EC /* Me.swift in Sources */,
+				DD4378BE2BDC085D0065F8EC /* Extension.swift in Sources */,
+				DD4378BC2BDC085D0065F8EC /* ExtoleOperation.swift in Sources */,
+				DD4378D12BDC085D0065F8EC /* ExtoleWebView.swift in Sources */,
+				DD4378C42BDC085D0065F8EC /* ShareServiceImpl.swift in Sources */,
+				DD4378B52BDC085D0065F8EC /* NoOpCondition.swift in Sources */,
+				DD4378D42BDC085D0065F8EC /* RewardService.swift in Sources */,
+				DD4378BF2BDC085D0065F8EC /* ExtoleImpl.swift in Sources */,
+				DD4378B02BDC085D0065F8EC /* NoOpAction.swift in Sources */,
+				DD4378C12BDC085D0065F8EC /* ExtoleLogHandler.swift in Sources */,
+				DD4378B12BDC085D0065F8EC /* PromptAction.swift in Sources */,
+				DD4378D52BDC085D0065F8EC /* ShareService.swift in Sources */,
+				DD4378C02BDC085D0065F8EC /* ExtoleLoggerImpl.swift in Sources */,
+				DD4378BA2BDC085D0065F8EC /* AppEngine.swift in Sources */,
+				DD4378C32BDC085D0065F8EC /* RewardServiceImpl.swift in Sources */,
+				DD4378AD2BDC085D0065F8EC /* FetchAction.swift in Sources */,
+				DD4378BD2BDC085D0065F8EC /* CampaignImpl.swift in Sources */,
+				DD4378AE2BDC085D0065F8EC /* LoadOperationsAction.swift in Sources */,
+				DD4378C82BDC085D0065F8EC /* Action.swift in Sources */,
+				DD4378B32BDC085D0065F8EC /* ViewFullScreenAction.swift in Sources */,
+				DD4378D02BDC085D0065F8EC /* ExtoleServices.swift in Sources */,
+				DD4378B82BDC085D0065F8EC /* PromptView.swift in Sources */,
+				DD4378C72BDC085D0065F8EC /* Zones.swift in Sources */,
+				DD4378C22BDC085D0065F8EC /* ExtoleWebViewService.swift in Sources */,
+				DD4378BB2BDC085D0065F8EC /* AppEvent.swift in Sources */,
+				DD4378D62BDC085D0065F8EC /* Zone.swift in Sources */,
+				DD4378CF2BDC085D0065F8EC /* ExtoleLogger.swift in Sources */,
+				DD4378CB2BDC085D0065F8EC /* Condition.swift in Sources */,
+				DD4378CD2BDC085D0065F8EC /* Event.swift in Sources */,
+				DD4378C62BDC085D0065F8EC /* ZoneResponseKey.swift in Sources */,
+				DD4378B42BDC085D0065F8EC /* EventCondition.swift in Sources */,
+				DD4378C92BDC085D0065F8EC /* ActionType.swift in Sources */,
+				DD4378AF2BDC085D0065F8EC /* NativeShareAction.swift in Sources */,
+				DD4378CE2BDC085D0065F8EC /* Extole.swift in Sources */,
+				DD4378CC2BDC085D0065F8EC /* ConditionType.swift in Sources */,
+				DD4378B22BDC085D0065F8EC /* SetLogLevelAction.swift in Sources */,
+				DD4378C52BDC085D0065F8EC /* ZoneFetcher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DD4377AB2BDC083E0065F8EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD4377AC2BDC083E0065F8EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD4377AE2BDC083E0065F8EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.axos.Extole-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DD4377AF2BDC083E0065F8EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.axos.Extole-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DD4377A02BDC083E0065F8EC /* Build configuration list for PBXProject "Extole-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4377AB2BDC083E0065F8EC /* Debug */,
+				DD4377AC2BDC083E0065F8EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD4377AD2BDC083E0065F8EC /* Build configuration list for PBXNativeTarget "Extole-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD4377AE2BDC083E0065F8EC /* Debug */,
+				DD4377AF2BDC083E0065F8EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DD43779D2BDC083E0065F8EC /* Project object */;
+}

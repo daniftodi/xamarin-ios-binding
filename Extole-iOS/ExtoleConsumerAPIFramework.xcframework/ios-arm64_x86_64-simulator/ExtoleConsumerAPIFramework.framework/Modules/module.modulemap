@@ -1,0 +1,6 @@
+framework module ExtoleConsumerAPIFramework {
+  umbrella header "ExtoleConsumerAPIFramework.h"
+  export *
+
+  module * { export * }
+}
