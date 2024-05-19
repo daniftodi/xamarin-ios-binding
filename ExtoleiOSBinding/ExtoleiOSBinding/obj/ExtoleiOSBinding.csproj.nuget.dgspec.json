@@ -1,0 +1,37 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/dan/projects/ExtoleiOSBinding/ExtoleiOSBinding/ExtoleiOSBinding.csproj": {}
+  },
+  "projects": {
+    "/Users/dan/projects/ExtoleiOSBinding/ExtoleiOSBinding/ExtoleiOSBinding.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/dan/projects/ExtoleiOSBinding/ExtoleiOSBinding/ExtoleiOSBinding.csproj",
+        "projectName": "NativeLibrary",
+        "projectPath": "/Users/dan/projects/ExtoleiOSBinding/ExtoleiOSBinding/ExtoleiOSBinding.csproj",
+        "packagesPath": "/Users/dan/.nuget/packages/",
+        "outputPath": "/Users/dan/projects/ExtoleiOSBinding/ExtoleiOSBinding/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "/Users/dan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "xamarinios10"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "xamarinios10": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "xamarinios10": {}
+      }
+    }
+  }
+}
