@@ -1,0 +1,81 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "203255edc1740e446e525359a189741e4d27a4aa578a7bbde312e1de07bc8fb4"
+    }
+  ],
+  "containerPath" : "/Users/dan/projects/ExtoleForXamariniOS/Extole-iOS/Extole-iOS.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "install",
+    "activeArchitecture" : "undefined_arch",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : true,
+      "platform" : "iphonesimulator",
+      "sdk" : "iphonesimulator16.2",
+      "sdkVariant" : "iphonesimulator",
+      "supportedArchitectures" : [
+        "i386",
+        "x86_64"
+      ],
+      "targetArchitecture" : "undefined_arch"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Products",
+      "derivedDataPath" : "/Users/dan/projects/ExtoleForXamariniOS/build",
+      "indexDataStoreFolderPath" : "/Users/dan/projects/ExtoleForXamariniOS/build/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/dan/projects/ExtoleForXamariniOS/build/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "BUILD_LIBRARY_FOR_DISTRIBUTION" : "YES",
+          "ENABLE_BITCODE" : "NO",
+          "SKIP_INSTALL" : "NO"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "install",
+          "ASSET_PACK_FOLDER_PATH" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/InstallationBuildProductsLocation/OnDemandResources",
+          "ASSETCATALOG_COMPILER_FLATTENED_APP_ICON_PATH" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/BuildProductsPath/ProductIcon.png",
+          "BITCODE_GENERATION_MODE" : "bitcode",
+          "COLOR_DIAGNOSTICS" : "YES",
+          "DEPLOYMENT_LOCATION" : "YES",
+          "DEPLOYMENT_POSTPROCESSING" : "YES",
+          "diagnostic_message_length" : "164",
+          "DSTROOT" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/InstallationBuildProductsLocation",
+          "EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE" : "NO",
+          "ENABLE_PREVIEWS" : "NO",
+          "INDEX_ENABLE_DATA_STORE" : "NO",
+          "MESSAGES_APPLICATION_EXTENSION_SUPPORT_FOLDER_PATH" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/BuildProductsPath/MessagesApplicationExtensionSupport",
+          "MESSAGES_APPLICATION_SUPPORT_FOLDER_PATH" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/BuildProductsPath/MessagesApplicationSupport",
+          "OBJROOT" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/IntermediateBuildFilesPath",
+          "SHARED_PRECOMPS_DIR" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/PrecompiledHeaders",
+          "SWIFT_STDLIB_TOOL_UNSIGNED_DESTINATION_DIR" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/BuildProductsPath/SwiftSupport",
+          "SYMROOT" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/BuildProductsPath",
+          "WATCHKIT_2_SUPPORT_FOLDER_PATH" : "/Users/dan/projects/ExtoleForXamariniOS/build/Build/Intermediates.noindex/ArchiveIntermediates/Extole-iOS/BuildProductsPath/WatchKitSupport2"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "archive",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

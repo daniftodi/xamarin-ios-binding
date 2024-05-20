@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>6EF96D2F-B385-4161-AAA2-DCC63C94C6EE</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6EF96D2F-B385-4161-AAA2-DCC63C94C6EE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Extole-iOS project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Extole-iOS</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Archiving project Extole-iOS with scheme Extole-iOS</string>
+			<key>timeStartedRecording</key>
+			<real>737879484.50339401</real>
+			<key>timeStoppedRecording</key>
+			<real>737879501.59644699</real>
+			<key>title</key>
+			<string>Archiving project Extole-iOS with scheme Extole-iOS</string>
+			<key>uniqueIdentifier</key>
+			<string>6EF96D2F-B385-4161-AAA2-DCC63C94C6EE</string>
+		</dict>
+		<key>A11EA0EA-A7E8-4A53-A739-AE037CC7976C</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>A11EA0EA-A7E8-4A53-A739-AE037CC7976C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Extole-iOS project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Extole-iOS</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Archiving project Extole-iOS with scheme Extole-iOS</string>
+			<key>timeStartedRecording</key>
+			<real>737879522.43450403</real>
+			<key>timeStoppedRecording</key>
+			<real>737879539.17948496</real>
+			<key>title</key>
+			<string>Archiving project Extole-iOS with scheme Extole-iOS</string>
+			<key>uniqueIdentifier</key>
+			<string>A11EA0EA-A7E8-4A53-A739-AE037CC7976C</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
